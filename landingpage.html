@@ -1,0 +1,513 @@
+<style>
+:root {
+    --blue: #0099FF;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #d64cA8;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #474543;
+    --primary: #d64cA8;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f1f3f2;
+    --dark: #474543;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: "Work Sans", sans-serif !important;
+    letter-spacing: -0.02rem;
+    color: #1e1e1e;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.header{
+    position:fixed;
+    background-color: var(--white, #fff) !important;
+    top:0;
+    width:100%;
+    height: 80px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+@media(max-width: 800px){
+    .header{
+       height:200px;
+       flex-wrap: wrap;
+    }
+}
+@media(max-width: 600px){
+    .header{
+       height:150px;
+       flex-wrap: wrap;
+    }
+}
+
+.container{
+    display:flex;
+    
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.container-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+    width:100%;
+    
+    list-style-type: none;
+   /* background-color:chocolate;*/
+   
+}
+#nav-bar{
+    width: 40%;
+    
+}
+@media(max-width: 800px){
+    #nav-bar{
+        width: 100%;
+        height: 60%;
+        flex-wrap: wrap;
+    }
+}
+.medidas{
+    width:100%;
+    height:100%;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-align:center;
+}
+@media (max-width: 600px){
+    .medidas{
+        height:33%;
+        flex-wrap: wrap;
+    }
+    .container-ul{
+        height:100%;
+        flex-wrap: wrap;
+    }
+}
+.nav-link{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-align:center;
+    
+}
+.icons{
+    width:60%;
+    /*background-color:green;*/
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+   
+    
+}
+#header-img
+{
+  width:6rem;
+  height:auto;
+  margin-left:10%;
+  align-self: center;
+  
+}
+@media (max-width: 800px)
+{
+    #header-img{
+        margin-left: 30%;
+    }
+}
+#header-icon{
+    margin-left: 10px;
+}
+
+.container-main{
+    
+    display:flex;
+    flex-direction: column;
+    font-size: 1.45rem;
+    width:100%;
+    height:100%;
+    
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content:space-evenly;
+    text-align: center;
+    padding: 0rem;
+    /*max-width: 1000px;*/   
+    background-color: var(--white, white) !important;
+}
+.container-footer{
+    color: rgb(165, 165, 165);
+    font-size: 0.8rem;
+   /* position: absolute;
+    bottom:0;*/
+    margin-top: -98px;
+    background-color:#172026 !important;;
+    width: 80%;
+    /*max-width: 50rem;*/
+    padding: 1rem;
+    text-align: right;
+}
+.image-footer{
+    float: left; 
+    
+    max-height: 4rem;
+    max-width: 6em;
+    padding: auto;
+    margin-left: 10px;   
+}
+.first{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white, white) !important;
+    width: auto;
+    height:auto;
+    margin-top:20rem;
+    margin-bottom: 20rem;    
+    text-align:center;
+  
+}
+
+.image-page{
+    
+    
+    max-height: 505px;
+    min-height: 250px;
+}
+@media (max-height: 500px), (max-width: 800px){
+    .image-page{
+        margin-top: 10rem;
+        transform: scale(0.6);
+    }
+}
+.title{
+    visibility: hidden;
+    overflow: hidden;
+    width:0;
+    height:0;
+}
+
+.first p{
+    margin:auto;
+    width:70%;
+    
+
+    z-index: 1;
+    font-size: 1.5rem;
+}
+@media(max-width: 800px)
+{
+    .first p {
+        font-size: 1.2rem;
+    }
+}
+@media(max-width: 600px)
+{
+    .first p{
+        font-size: 1rem;
+    }
+}
+.segundo{
+    
+    background-color: var(--white, white) !important;
+    width: auto;
+    height:auto;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-bottom: 0rem;
+    
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    
+    
+}
+@media(max-width: 800px)
+{
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 500px)
+{
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.font-h2-product{
+    font-weight: 1000 !important;  
+    
+}
+.font-p{
+    font-size: 1.112rem;
+}
+.image-product{
+    max-width: 42px;
+    height:42px;
+}
+.flex-product{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-star;
+    padding:0.8rem;
+    text-align: left;
+    width:100%;
+    height:100%;
+
+}
+.azul{
+    background-color: #0099FF;
+    width:100%;
+    height:100%;
+}
+.indigo{
+    background-color:#6610f2;
+    width:100%;
+    height:100%;
+}
+.purple{
+    background-color:#6f42c1;
+    width:100%;
+    height:100%;
+}
+.pink{
+    background-color:#d64cA8;
+    width:100%;
+    height:100%;
+}
+.red{
+    background-color:#dc3545;
+    width:100%;
+    height:100%;
+}
+.orange{
+    background-color:#fd7e14;
+    width:100%;
+    height:100%;
+}
+.yellow{
+    background-color:#ffc107;    
+}
+
+
+
+
+
+.tercero{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#172026 !important;
+
+    width: 100vw;
+    height:auto;
+    margin-bottom: 0rem;
+    padding: 0rem;
+    text-align: center;
+    color:var(--white);
+  
+}
+.cuarto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--primary);
+    width: 100vw;
+    height:200vh;
+    margin-bottom: 0rem;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+  
+}
+#video{
+    
+    
+    max-width: 560px;
+    max-height: 315px;
+    
+}
+@media (max-width: 570px), (max-height: 500px)
+{
+    #video{
+        transform: scale(0.6);
+    }
+    .container-footer{
+        transform: scale(0.6);
+        margin-top: -auto;
+        width: 100vw;
+    }
+}
+#form{
+    width:100%;
+    height: 10rem;
+}
+input{
+    border-radius: 2px;
+    border: 10px solid linear(35deg, var(--primary));
+    height:2rem;
+       
+}
+[type='email']{
+    width:70%;
+    
+}
+[type='submit']{
+    width:10%;
+    
+}
+
+</style>
+
+<div class="container">
+    <header class="header" id="header">
+        <div class="icons">
+            <img id="header-img" src="https://www.linuxadictos.com/wp-content/uploads/tux-logo.jpg.webp"/>
+            
+        </div>
+        <nav id="nav-bar">
+            <ul class="container-ul">
+                <li class="medidas"><a class="nav-link" href="#features">Features</a></li> 
+                <li class="medidas"><a class="nav-link" href="#about-us">About Us</a></li> 
+                <li class="medidas"><a class="nav-link" href="#join">Join Our community</a></li>   
+            </ul>
+        </nav>
+         
+    </header>
+   
+    <main class="container-main">
+        <div class="first" id="about">
+            <div>
+            <img src="https://lafichablog.files.wordpress.com/2015/02/linux-logo-600x300.png" class="image-page">
+            <h1 class="title">Polkadot</h1>
+            <p>Linux is a family of open-source Unix-like operating systems based on the Linux kernel, an operating system kernel first released on September 17, 1991, by Linus Torvalds. Linux is typically packaged in a Linux distribution.</p>
+            
+            </div>
+        </div>
+        <div id="features" class="segundo grid" >
+            <div class="flex-product" >
+                <img class="image-product" src="https://polkadot.network/assets/img/icons/home-icon1.svg?v=500dd16651"/>
+                <h2 class="font-h2-product">Allows access to free Software</h2>
+                <p class="font-p">Its status as an open source operating system makes it
+                possible to take advantage of permanent advances in software, with programs 
+                developed by computer scientists around the world constantly expanding their 
+                range of action.</p>
+            </div>
+            <div class="flex-product">
+                <img class="image-product" src="https://polkadot.network/assets/img/icons/home-icon2.svg?v=500dd16651"/>
+                <h2 class="font-h2-product">It is focused on the use of networks</h2>
+                <p class="font-p">Oriented to networking, Linux is an immense alliance of users
+                distributed throughout the planet , who provide improvements and solutions
+                in an open way through the Internet . Thanks to this condition, Linux develops 
+                faster and more efficiently. In addition, the operating system has strong support 
+                for the communications and networking area.</p>
+            </div>
+            <div class="flex-product">
+                <img class="image-product" src="https://polkadot.network/assets/img/icons/home-icon3.svg?v=500dd16651"/>
+                <h2 class="font-h2-product">It is the operating system preferred by computer scientists</h2>
+                <p class="font-p">The possibility of constant and free modifications and its great 
+                computing and processing power have transformed Linux into the operating system preferred 
+                by computer scientists and specialists.</p>
+            </div>
+            <div class="flex-product">
+                <img class="image-product" src="https://polkadot.network/assets/img/icons/home-icon4.svg?v=500dd16651"/>
+                <h2 class="font-h2-product">Supports all types of hardware and can work on multiple platforms</h2>
+                <p class="font-p">The ductility of Linux in terms of its use on different kinds of platforms and devices,
+                 as well as its ability to facilitate the operation of all kinds of hardware are conditions that stand out 
+                 especially in this operating system.</p>
+            </div>
+            <div class="flex-product">
+                <img class="image-product" src="https://polkadot.network/assets/img/icons/home-icon5.svg?v=500dd16651"/>
+                <h2 class="font-h2-product">Features significant multitasking ability</h2>
+                <p class="font-p">This feature makes it possible for Linux to run multiple programs at the same time and 
+                with good performance without having to stop any of the applications . Logically, this multiplies the specific
+                functional capacity.</p>
+            </div>
+            <div class="flex-product">
+                <img class="image-product" src="https://polkadot.network/assets/img/icons/home-icon6.svg?v=500dd16651"/>
+                <h2 class="font-h2-product">Guarantees an advanced level of security</h2>
+                <p class="font-p">The use of the DES algorithm, with tests that verify its security, as well as the constant 
+                contribution of users in terms of advances and modifications have made Linux a leading operating system in terms 
+                of security. A clear example is that NASA has chosen it for the computer operation of many of its missions.</p>
+            </div>
+        </div>
+        <div id="about-us" class="tercero" id="about-us">
+            <h2>About us?</h2>
+            <iframe width="560" height="315" 
+            id="video"
+            src="https://www.youtube.com/embed/zA3vmx0GaO8" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        </div>
+        
+        <div id="join" class="cuarto" id="join">
+            <h2>Join Our Community!</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+              <input
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <input id="submit" type="submit" value="Get Started" class="btn" />
+            </form>
+        </div>
+    </main>
+
+    <footer class="container-footer">
+        <hr/>
+        <div>
+        <img class="image-footer" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"/> 
+        <p>
+        <br/>
+        Copyright ....., 2021
+        <br/>
+        Credits: <a href="https://es.wikipedia.org/wiki/GNU/Linux">wikipedia</a>, <a href="https://www.redhat.com/es/topics/linux">Red Hat</a>, <a href="https://twitter.com/phenix_720/status/1078799251885486080">@Phenix_720</a>
+        </p>
+        </div>
+    </footer>
+    
+</div>
